@@ -4,17 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taupik</title>
-    <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logo padding - 20.ico" type="image/x-icon">
+
+    <!-- Meta Tag -->
+    <meta property="og:title" content="Taupik | Personal Website">
+    <meta name="description" content="Hey, I'm Taupik, you can call me Upik or Pik. I love anything about technology, especially in software development and web development.">
+    <meta property="og:description" content="Hey, I'm Taupik, you can call me Upik or Pik. I love anything about technology, especially in software development and web development.">
+  
+    <meta name="author" content="Taupik">
+    <meta name="google-site-verification" content="zxOAqshwE3h9bRt4Vio9ZkBBHyFG3LueTXSkBy6U6v4" />
+  
+    <!-- Custom Style -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/breakpoint.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="logo-brand">
-            <img class="logo-img" src="assets/images/logo-fill.ico" alt="" width="30px">
+    <!-- Top Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img class="logo-img" src="assets/images/logo full.png" alt="" style="width: 100px;">
+            </a>
+        </div>
+    
+        <div class="menu">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="https://taupik-001.github.io/" class="nav-link active"><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://taupik-001.github.io/blog" class="nav-link"><span>Blog</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://taupik-001.github.io/project" class="nav-link"><span>Project</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://taupik-001.github.io/experiences" class="nav-link"><span>Experiences</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://taupik-001.github.io/achievements" class="nav-link"><span>Achievements</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://taupik-001.github.io/contact" class="nav-link"><span>Contact</span></a>
+                </li>
+            </ul>
+            <button class="nav-button">
+                <div class="menu-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </button>
+        </div>
+
+    </nav>
+    <!-- END Top Navbar -->
+
+    <!-- Sidebar on Mobile -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img class="logo-img" src="assets/images/logo.png" alt="" style="width: 30px;">
             <span class="logo-text">Taupik</span>
         </div>
-    </nav>
-    <h1>Hello Taupik Here!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, repudiandae.</p>
+        <div class="menu">
+            <ul class="side-menu">
+                <li class="side-item">Home</li>
+                <li class="side-item">Blog</li>
+                <li class="side-item">Project</li>
+                <li class="side-item">Experiences</li>
+                <li class="side-item">Achievements</li>
+                <li class="side-item">Contact</li>
+            </ul>
+        </div>
+    </aside>
+    <!-- END Sidebar on Mobile -->
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="content">
+            <div class="information">
+                <div class="headline">
+                    <span>Hello 👋, I Am</span>
+                    <span class="name">Taupik</span>
+
+                    <div class="role">
+                        And I’m a 
+                        <div id="role-text" class="role-text">
+                            <b>Full-Stack Web Developer</b>
+                            <b>Software Developer</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>With great enthusiasm and expertise in backend development using <b>CodeIgniter 4</b>. I handle frontend with <b>Tailwind</b>, <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>, and do design creation using <b>Figma</b>.</p>
+                    <p>I also create <b>Android</b> applications using <b>Java</b> and develop <b>Desktop</b> applications with the <b>C# .NET Framework</b>. </p>
+                    <p>I <b>love exploring new technologies</b> and <b>solving coding problems</b>. When not coding, I enjoy playing or making simple games.</p>
+                </div>
+            </div>
+            <div class="game-display"></div>
+        </div>
+    </main>
+    <!-- END Main Content -->
+
+    <!-- Custom Script -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

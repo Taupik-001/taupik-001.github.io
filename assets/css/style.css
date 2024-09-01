@@ -1,16 +1,226 @@
+:root {
+    --black: #1E1E1E;
+    --white: #F9F9F9;
+    --slate: #F2F2F2;
+    --gray: #808080;
+    --cornflower-blue: #92C5F2;
+    --steel-blue: #3B6B9A;
+    --yellow: #FDC603;
+
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
-.logo-brand {
-
+body {
+    background-color: var(--white);
 }
 
-.logo-img {
-
+ul, li, a, button, h1, h2, h3, h4, h5, h6 {
+    all: unset;
 }
 
-.logo-text {
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 0.1px solid var(--slate);
+}
+
+.navbar .logo {
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .menu {
+    margin-right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* If there is any element .nav-item aligned */
+.nav-item + .nav-item {
+    margin-left: 2rem;
+}
+
+/* All element with .nav-item but ignore the first one */
+/* .nav-item:not(:first-child) {
+    margin-left: 2rem;
+} */
+
+/* All element with .nav-item but ignore the last one */
+/* .nav-item:not(:last-child) {
+    margin-left: 2rem;
+} */
+
+.nav-link {
+    color: var(--gray);
+}
+
+.nav-link.active {
+    font-weight: 700;
+    color: var(--black);
+}
+
+.nav-button {
+    background-color: blue;
+}
+
+.logo .logo-img {
+    padding-right: 0.5rem;
+}
+
+.logo .logo-text {
+    font-weight: 800;
+    font-size: 1.25rem;
+    background: -webkit-linear-gradient(135deg, var(--steel-blue), var(--steel-blue), var(--steel-blue), var(--black), var(--black));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main {
+    margin-top: 60px;
+    padding: 0 120px 0;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    display: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.information {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.headline {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.headline span {
+    display: block;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.role-text {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+    padding-left: 5px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes deleting {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+.solid-cursor::after {
+    content: "|";
+    color: var(--steel-blue);
+    opacity: 1;
+    animation: none; 
+}
+
+.blinking-cursor::after {
+    content: "|";
+    animation: blink 0.5s step-end infinite;
+    color: var(--steel-blue);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.description {
+    margin-top: 16px;
+}
+
+.description p {
+    margin-bottom: 16px;
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* Hamburger ICON */
+.menu-icon {
+    margin: 0 2rem 0;
+    width: 25px;
+    height: 40px;
+
+    cursor: pointer;
+    position: relative;
     
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 100px;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+}
+
+.menu-icon.active .bar1 {
+    transform: rotate(45deg) translate(5.75px, 5.75px);
+}
+
+.menu-icon.active .bar2 {
+    opacity: 0;
+}
+
+.menu-icon.active .bar3 {
+    transform: rotate(-45deg) translate(5.75px, -5.75px);
 }
