@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const texts = element.querySelectorAll("b");
     element.classList.add("solid-cursor");
 
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
+    const typingSpeed = 75;
+    const deletingSpeed = 25;
     const switchDelay = 2000;
 
     let currentTextIndex = 0;

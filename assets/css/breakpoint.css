@@ -3,12 +3,20 @@
     .content div {
         grid-column: span 12 / span 12;
     }
+
+    .main {
+        padding: 0 20px 0;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .content div {
         grid-column: span 12 / span 12;
+    }
+
+    .main {
+        padding: 0 20px 0;
     }
 }
 
@@ -17,6 +25,10 @@
     .content div {
         grid-column: span 6 / span 6;
     }
+
+    .main {
+        padding: 0 120px 0;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -24,11 +36,19 @@
     .content div {
         grid-column: span 6 / span 6;
     }
+
+    .main {
+        padding: 0 120px 0;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1280px) {
     .content div {
         grid-column: span 6 / span 6;
+    }
+    
+    .main {
+        padding: 0 120px 0;
     }
 }
